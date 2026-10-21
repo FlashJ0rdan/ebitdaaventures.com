@@ -50,7 +50,7 @@
       --radius-sm: 12px;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -132,8 +132,9 @@
       transition: opacity 0.2s;
     }
     .logo:hover { opacity: 0.72; }
-    .logo img { height: 38px; width: auto; display: block; }
-    @media (max-width: 480px) { .logo img { height: 30px; } }
+    .logo img { height: 76px; width: auto; display: block; }
+    nav .container { height: 92px; }
+    @media (max-width: 480px) { .logo img { height: 56px; } nav .container { height: 76px; } html { scroll-padding-top: 76px; } }
     .nav-links { display: flex; gap: 8px; align-items: center; }
     .nav-links a {
       color: var(--text-muted);
