@@ -1,0 +1,19 @@
+<svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="wipe" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0FBF8F"/>
+      <stop offset="100%" stop-color="#0CD9A0"/>
+    </linearGradient>
+  </defs>
+  <!-- App tile: Deep Basin -->
+  <rect x="0" y="0" width="1024" height="1024" rx="232" fill="#0A2E2A"/>
+  <!-- Z wipe stroke -->
+  <path d="M 312 330 L 668 330 L 356 694 L 712 694"
+        fill="none" stroke="url(#wipe)" stroke-width="118"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Sparkle at the finish of the wipe -->
+  <path d="M 790 250 C 798 296 812 310 858 318 C 812 326 798 340 790 386 C 782 340 768 326 722 318 C 768 310 782 296 790 250 Z"
+        fill="#FFB020"/>
+  <!-- small companion sparkle -->
+  <circle cx="866" cy="404" r="17" fill="#FFB020" opacity="0.85"/>
+</svg>
