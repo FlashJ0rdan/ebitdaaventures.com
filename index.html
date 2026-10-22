@@ -597,11 +597,10 @@
     @media (max-width: 900px) {
       .card--tidz.card-wide { grid-template-columns: 1fr; gap: 24px; }
     }
-    .card--wkc .card-glow { background: rgba(31, 33, 36, 0.05); top: -50px; right: -50px; }
+    .card--tenf .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
     .card--tidz .card-icon, .card--just .card-icon { background: none; border: none; }
     .card-icon--text { background: var(--text, #1F2124); color: #fff; font-weight: 900; font-size: 1.1rem; letter-spacing: -0.03em; }
-    .card--wkc .status-dot { background: #1F2124; }
-    .card-links { display: flex; gap: 12px; flex-wrap: wrap; }
+    .card--tenf .status-dot { background: #AC373A; box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); animation: pulse 2s ease-in-out infinite; }
     .card-link { display: inline-flex; align-items: center; margin-top: 4px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(172, 55, 58, 0.25); color: #AC373A; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
     .card-link:hover { background: rgba(172, 55, 58, 0.06); }
     .card--tidz .notify-input:focus { border-color: var(--tidz-primary); }
@@ -995,7 +994,7 @@
         Building in public
       </div>
       <h1 class="reveal reveal-delay-1">Software that <span class="gradient">moves</span> industries.</h1>
-      <p class="reveal reveal-delay-2">Ebitdaa Ventures LLC is a software holding company building consumer and vertical SaaS products — from real-time group dining to Hojii (self-storage OS) and Tidzee (AI cleaning platform).</p>
+      <p class="reveal reveal-delay-2">Ebitdaa Ventures LLC is a software holding company building consumer and vertical SaaS products — from real-time group dining to Hojii (self-storage OS), Tidzee (AI cleaning platform) and TenForma (proforma building for self-storage and multifamily).</p>
       <div class="hero-ctas reveal reveal-delay-3">
         <a href="#portfolio" class="btn btn--primary">Explore Portfolio →</a>
         <a href="#about" class="btn btn--ghost">Our Story</a>
@@ -1039,7 +1038,7 @@
     <div class="container">
       <div class="section-label reveal">Portfolio</div>
       <h2 class="section-title reveal reveal-delay-1">What we're building</h2>
-      <p class="section-desc reveal reveal-delay-2">Four brands. Four categories. One thesis: software built by operators outperforms software built by outsiders.</p>
+      <p class="section-desc reveal reveal-delay-2">Four products. Three categories. One thesis: software built by operators outperforms software built by outsiders.</p>
 
       <div class="portfolio-grid">
         <!-- wdyw? -->
@@ -1112,26 +1111,22 @@
           <a href="https://tidzee.com" target="_blank" rel="noopener" class="card-link">Visit tidzee.com →</a>
         </div>
 
-        <!-- Who Knew Club -->
-        <div class="card card--wkc reveal reveal-delay-3" id="cardWkc">
+        <!-- TenForma -->
+        <div class="card card--tenf reveal reveal-delay-3" id="cardTenf">
           <div class="card-glow"></div>
           <div class="card-header">
-            <div class="card-icon card-icon--text">?!</div>
+            <div class="card-icon card-icon--text">tf.</div>
             <div class="card-status">
               <span class="status-dot"></span>
-              Media
+              In Development
             </div>
           </div>
-          <h3>Who Knew Club</h3>
-          <p>A faceless history channel.</p>
+          <h3>TenForma</h3>
+          <p>Proforma-building SaaS for self-storage and multifamily facilities.</p>
           <div class="card-tags">
-            <span class="tag">YouTube</span>
-            <span class="tag">TikTok</span>
-            <span class="tag">History</span>
-          </div>
-          <div class="card-links">
-            <a href="https://www.youtube.com/@whoknewclub" target="_blank" rel="noopener" class="card-link">YouTube →</a>
-            <a href="https://www.tiktok.com/@who.knew.club" target="_blank" rel="noopener" class="card-link">TikTok →</a>
+            <span class="tag">Vertical SaaS</span>
+            <span class="tag">Self-Storage</span>
+            <span class="tag">Multifamily</span>
           </div>
         </div>
 
@@ -1145,15 +1140,15 @@
       <div class="ticker-grid">
         <div class="ticker-item reveal">
           <div class="ticker-num" data-count="4">0</div>
-          <div class="ticker-label">Brands in Portfolio</div>
+          <div class="ticker-label">Products in Portfolio</div>
         </div>
         <div class="ticker-item reveal reveal-delay-1">
           <div class="ticker-num" data-count="20" data-suffix="+">0</div>
           <div class="ticker-label">Facilities Managed</div>
         </div>
         <div class="ticker-item reveal reveal-delay-2">
-          <div class="ticker-num" data-count="4" data-suffix=" Verticals">0</div>
-          <div class="ticker-label">Consumer, SaaS, Services &amp; Media</div>
+          <div class="ticker-num" data-count="3" data-suffix=" Verticals">0</div>
+          <div class="ticker-label">Consumer, SaaS &amp; Services</div>
         </div>
         <div class="ticker-item reveal reveal-delay-3">
           <div class="ticker-num" data-count="2026">0</div>
