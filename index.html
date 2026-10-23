@@ -30,27 +30,27 @@
 
     :root {
       --bg: #ffffff;
-      --bg-elevated: #f7f7f8;
-      --bg-card: #fbfbfc;
-      --bg-card-hover: #f4f4f6;
-      --border: #d8d8dd;
-      --border-subtle: #ebebef;
-      --text: #1f2124;
-      --text-muted: #5a5d61;
-      --text-dim: #6b6e72;
-      --accent: #ac373a;
-      --accent-light: #c2454a;
-      --accent-dark: #8e2b2e;
-      --accent-glow: rgba(172, 55, 58, 0.15);
-      --wdyw-primary: #ac373a;
-      --wdyw-secondary: #8e2b2e;
-      --wdyw-glow: rgba(172, 55, 58, 0.10);
-      --just-primary: #ac373a;
-      --just-secondary: #8e2b2e;
-      --just-glow: rgba(172, 55, 58, 0.10);
-      --tidz-primary: #ac373a;
-      --tidz-secondary: #8e2b2e;
-      --tidz-glow: rgba(172, 55, 58, 0.10);
+      --bg-elevated: #F5F4F1;
+      --bg-card: #F5F4F1;
+      --bg-card-hover: #F5F4F1;
+      --border: #DDDCD7;
+      --border-subtle: #E6E6E3;
+      --text: #1F2124;
+      --text-muted: #5B5E63;
+      --text-dim: #8A8C90;
+      --accent: #AC3438;
+      --accent-light: #AC3438;
+      --accent-dark: #922B2F;
+      --accent-glow: rgba(172, 52, 56, 0.15);
+      --wdyw-primary: #AC3438;
+      --wdyw-secondary: #922B2F;
+      --wdyw-glow: rgba(172, 52, 56, 0.10);
+      --just-primary: #AC3438;
+      --just-secondary: #922B2F;
+      --just-glow: rgba(172, 52, 56, 0.10);
+      --tidz-primary: #AC3438;
+      --tidz-secondary: #922B2F;
+      --tidz-glow: rgba(172, 52, 56, 0.10);
       --radius: 20px;
       --radius-sm: 12px;
     }
@@ -73,7 +73,7 @@
       width: 500px;
       height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(172, 55, 58, 0.07) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(172, 52, 56, 0.07) 0%, transparent 70%);
       pointer-events: none;
       z-index: 0;
       transform: translate(-50%, -50%);
@@ -190,7 +190,7 @@
     }
     .hero-orb--1 {
       width: 400px; height: 400px;
-      background: rgba(172, 55, 58, 0.10);
+      background: rgba(172, 52, 56, 0.10);
       top: 40px; left: 50%;
       transform: translateX(-70%);
     }
@@ -229,8 +229,8 @@
     .hero-badge .dot {
       width: 6px; height: 6px;
       border-radius: 50%;
-      background: #22c55e;
-      box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+      background: #AC3438;
+      box-shadow: 0 0 8px rgba(172, 52, 56, 0.6);
       animation: pulse 2s ease-in-out infinite;
     }
     @keyframes pulse {
@@ -248,7 +248,7 @@
       margin-right: auto;
     }
     .hero h1 .gradient {
-      background: linear-gradient(135deg, #8e2b2e, #ac373a, #d4565a, #8e2b2e);
+      background: linear-gradient(135deg, #922B2F, #AC3438, #AC3438, #922B2F);
       background-size: 300% 300%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -289,12 +289,12 @@
     .btn--primary {
       background: var(--accent);
       color: white;
-      box-shadow: 0 4px 20px rgba(172, 55, 58, 0.28);
+      box-shadow: 0 4px 20px rgba(172, 52, 56, 0.28);
     }
     .btn--primary:hover {
       background: var(--accent-light);
       transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(172, 55, 58, 0.36);
+      box-shadow: 0 8px 28px rgba(172, 52, 56, 0.36);
     }
     .btn--ghost {
       background: rgba(31,33,36,0.05);
@@ -310,8 +310,8 @@
     /* ── Marquee ── */
     .marquee-section {
       padding: 56px 0;
-      border-top: 1px solid rgba(172, 55, 58, 0.22);
-      border-bottom: 1px solid rgba(172, 55, 58, 0.22);
+      border-top: 1px solid rgba(172, 52, 56, 0.22);
+      border-bottom: 1px solid rgba(172, 52, 56, 0.22);
       background: var(--bg-elevated);
       overflow: hidden;
     }
@@ -331,7 +331,7 @@
       font-size: 1.1rem;
       font-weight: 700;
       color: var(--accent);
-      text-shadow: 0 0 18px rgba(172, 55, 58, 0.35);
+      text-shadow: 0 0 18px rgba(172, 52, 56, 0.35);
       white-space: nowrap;
       display: flex;
       align-items: center;
@@ -343,7 +343,7 @@
       width: 6px; height: 6px;
       border-radius: 50%;
       background: var(--accent);
-      box-shadow: 0 0 8px rgba(172, 55, 58, 0.55);
+      box-shadow: 0 0 8px rgba(172, 52, 56, 0.55);
     }
 
     /* ── Section ── */
@@ -412,21 +412,21 @@
     .card:hover::before { opacity: 1; }
 
     /* ── wdyw Card ── */
-    .card--wdyw .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
+    .card--wdyw .card-glow { background: rgba(172, 52, 56, 0.06); top: -50px; right: -50px; }
     .card--wdyw::before {
       background: linear-gradient(90deg, transparent, var(--wdyw-primary), var(--wdyw-secondary), transparent);
     }
     .card--wdyw:hover {
-      box-shadow: 0 12px 48px var(--wdyw-glow), 0 0 0 1px rgba(172, 55, 58, 0.09);
+      box-shadow: 0 12px 48px var(--wdyw-glow), 0 0 0 1px rgba(172, 52, 56, 0.09);
     }
 
     /* ── JustDashboard Card ── */
-    .card--just .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
+    .card--just .card-glow { background: rgba(172, 52, 56, 0.06); top: -50px; right: -50px; }
     .card--just::before {
       background: linear-gradient(90deg, transparent, var(--just-primary), var(--just-secondary), transparent);
     }
     .card--just:hover {
-      box-shadow: 0 12px 48px var(--just-glow), 0 0 0 1px rgba(172, 55, 58, 0.09);
+      box-shadow: 0 12px 48px var(--just-glow), 0 0 0 1px rgba(172, 52, 56, 0.09);
     }
 
     .card-header {
@@ -450,12 +450,12 @@
       border-radius: inherit;
     }
     .card--wdyw .card-icon {
-      background: linear-gradient(135deg, var(--wdyw-glow), rgba(172, 55, 58, 0.07));
-      border: 1px solid rgba(172, 55, 58, 0.16);
+      background: linear-gradient(135deg, var(--wdyw-glow), rgba(172, 52, 56, 0.07));
+      border: 1px solid rgba(172, 52, 56, 0.16);
     }
     .card--just .card-icon {
-      background: linear-gradient(135deg, var(--just-glow), rgba(172, 55, 58, 0.07));
-      border: 1px solid rgba(172, 55, 58, 0.16);
+      background: linear-gradient(135deg, var(--just-glow), rgba(172, 52, 56, 0.07));
+      border: 1px solid rgba(172, 52, 56, 0.16);
     }
     .card-status {
       display: inline-flex;
@@ -471,20 +471,20 @@
     .card--wdyw .card-status {
       color: var(--wdyw-primary);
       background: var(--wdyw-glow);
-      border: 1px solid rgba(172, 55, 58, 0.14);
+      border: 1px solid rgba(172, 52, 56, 0.14);
     }
     .card--just .card-status {
       color: var(--just-primary);
       background: var(--just-glow);
-      border: 1px solid rgba(172, 55, 58, 0.14);
+      border: 1px solid rgba(172, 52, 56, 0.14);
     }
     .status-dot {
       width: 5px; height: 5px;
       border-radius: 50%;
       display: inline-block;
     }
-    .card--wdyw .status-dot { background: var(--wdyw-primary); box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); }
-    .card--just .status-dot { background: var(--just-primary); box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); animation: pulse 2s ease-in-out infinite; }
+    .card--wdyw .status-dot { background: var(--wdyw-primary); box-shadow: 0 0 6px rgba(172, 52, 56, 0.45); }
+    .card--just .status-dot { background: var(--just-primary); box-shadow: 0 0 6px rgba(172, 52, 56, 0.45); animation: pulse 2s ease-in-out infinite; }
     .card h3 {
       font-size: 1.6rem;
       font-weight: 700;
@@ -532,12 +532,12 @@
     .card--wdyw .card-action {
       color: white;
       background: var(--wdyw-primary);
-      box-shadow: 0 4px 16px rgba(172, 55, 58, 0.25);
+      box-shadow: 0 4px 16px rgba(172, 52, 56, 0.25);
     }
     .card--wdyw .card-action:hover {
       background: var(--accent-dark);
       transform: translateY(-1px);
-      box-shadow: 0 6px 24px rgba(172, 55, 58, 0.33);
+      box-shadow: 0 6px 24px rgba(172, 52, 56, 0.33);
     }
     .card--wdyw .card-action svg { transition: transform 0.2s; }
     .card--wdyw .card-action:hover svg { transform: translateX(3px); }
@@ -570,23 +570,23 @@
     .app-store-badge .badge-main { font-size: 1rem; font-weight: 600; display: block; }
 
     /* ── Tidzee Card ── */
-    .card--tidz .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
+    .card--tidz .card-glow { background: rgba(172, 52, 56, 0.06); top: -50px; right: -50px; }
     .card--tidz::before {
       background: linear-gradient(90deg, transparent, var(--tidz-primary), var(--tidz-secondary), transparent);
     }
     .card--tidz:hover {
-      box-shadow: 0 12px 48px var(--tidz-glow), 0 0 0 1px rgba(172, 55, 58, 0.09);
+      box-shadow: 0 12px 48px var(--tidz-glow), 0 0 0 1px rgba(172, 52, 56, 0.09);
     }
     .card--tidz .card-icon {
-      background: linear-gradient(135deg, var(--tidz-glow), rgba(172, 55, 58, 0.07));
-      border: 1px solid rgba(172, 55, 58, 0.16);
+      background: linear-gradient(135deg, var(--tidz-glow), rgba(172, 52, 56, 0.07));
+      border: 1px solid rgba(172, 52, 56, 0.16);
     }
     .card--tidz .card-status {
       color: var(--tidz-primary);
       background: var(--tidz-glow);
-      border: 1px solid rgba(172, 55, 58, 0.14);
+      border: 1px solid rgba(172, 52, 56, 0.14);
     }
-    .card--tidz .status-dot { background: var(--tidz-primary); box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); animation: pulse 2s ease-in-out infinite; }
+    .card--tidz .status-dot { background: var(--tidz-primary); box-shadow: 0 0 6px rgba(172, 52, 56, 0.45); animation: pulse 2s ease-in-out infinite; }
     .card--tidz.card-wide {
       grid-column: 1 / -1;
       display: grid;
@@ -599,23 +599,23 @@
     }
     .card--tenf .card-icon { background: #fff; border: 1px solid var(--border-subtle); padding: 6px; }
     .card--tenf .card-icon img { object-fit: contain; }
-    .card--tenf .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
+    .card--tenf .card-glow { background: rgba(172, 52, 56, 0.06); top: -50px; right: -50px; }
     .card--tidz .card-icon, .card--just .card-icon { background: none; border: none; }
     .card-icon--text { background: var(--text, #1F2124); color: #fff; font-weight: 900; font-size: 1.1rem; letter-spacing: -0.03em; }
     .card--mktg .card-icon { background: #fff; border: 1px solid var(--border-subtle); padding: 6px; }
     .card--mktg .card-icon img { object-fit: contain; }
-    .card--mktg .card-glow { background: rgba(172, 55, 58, 0.06); top: -50px; right: -50px; }
-    .card--mktg .status-dot { background: #AC373A; box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); animation: pulse 2s ease-in-out infinite; }
-    .card--tenf .status-dot { background: #AC373A; box-shadow: 0 0 6px rgba(172, 55, 58, 0.45); animation: pulse 2s ease-in-out infinite; }
-    .card-link { display: inline-flex; align-items: center; margin-top: 4px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(172, 55, 58, 0.25); color: #AC373A; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
-    .card-link:hover { background: rgba(172, 55, 58, 0.06); }
+    .card--mktg .card-glow { background: rgba(172, 52, 56, 0.06); top: -50px; right: -50px; }
+    .card--mktg .status-dot { background: #AC3438; box-shadow: 0 0 6px rgba(172, 52, 56, 0.45); animation: pulse 2s ease-in-out infinite; }
+    .card--tenf .status-dot { background: #AC3438; box-shadow: 0 0 6px rgba(172, 52, 56, 0.45); animation: pulse 2s ease-in-out infinite; }
+    .card-link { display: inline-flex; align-items: center; margin-top: 4px; padding: 10px 18px; border-radius: 10px; border: 1px solid rgba(172, 52, 56, 0.25); color: #AC3438; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.2s; }
+    .card-link:hover { background: rgba(172, 52, 56, 0.06); }
     .card--tidz .notify-input:focus { border-color: var(--tidz-primary); }
     .card--tidz .notify-btn {
-      background: rgba(172, 55, 58, 0.14);
-      border: 1px solid rgba(172, 55, 58, 0.22);
+      background: rgba(172, 52, 56, 0.14);
+      border: 1px solid rgba(172, 52, 56, 0.22);
       color: var(--tidz-primary);
     }
-    .card--tidz .notify-btn:hover { background: rgba(172, 55, 58, 0.22); }
+    .card--tidz .notify-btn:hover { background: rgba(172, 52, 56, 0.22); }
 
     /* ── Coming soon notify ── */
     .notify-form {
@@ -638,8 +638,8 @@
     .notify-input::placeholder { color: var(--text-dim); }
     .notify-input:focus { border-color: var(--just-primary); }
     .notify-btn {
-      background: rgba(172, 55, 58, 0.14);
-      border: 1px solid rgba(172, 55, 58, 0.22);
+      background: rgba(172, 52, 56, 0.14);
+      border: 1px solid rgba(172, 52, 56, 0.22);
       border-radius: 8px;
       padding: 10px 16px;
       font-size: 0.82rem;
@@ -650,7 +650,7 @@
       transition: all 0.2s;
     }
     .notify-btn:hover {
-      background: rgba(172, 55, 58, 0.22);
+      background: rgba(172, 52, 56, 0.22);
     }
 
     /* ── About ── */
@@ -756,7 +756,7 @@
       bottom: 0; left: 50%;
       transform: translateX(-50%);
       width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(172, 55, 58, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(172, 52, 56, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
     .cta-section h2 {
@@ -827,9 +827,9 @@
       display: none;
       padding: 16px 24px;
       border-radius: 12px;
-      background: rgba(34, 197, 94, 0.08);
-      border: 1px solid rgba(34, 197, 94, 0.2);
-      color: #22c55e;
+      background: rgba(172, 52, 56, 0.08);
+      border: 1px solid rgba(172, 52, 56, 0.2);
+      color: #AC3438;
       font-size: 0.9rem;
       font-weight: 500;
     }
@@ -871,9 +871,9 @@
     .modal-icon {
       width: 64px; height: 64px;
       border-radius: 50%;
-      background: rgba(34, 197, 94, 0.1);
-      border: 1px solid rgba(34, 197, 94, 0.3);
-      color: #22c55e;
+      background: rgba(172, 52, 56, 0.1);
+      border: 1px solid rgba(172, 52, 56, 0.3);
+      color: #AC3438;
       font-size: 1.8rem;
       display: flex;
       align-items: center;
@@ -1068,7 +1068,7 @@
             <span class="tag">Consumer</span>
           </div>
           <a href="https://apps.apple.com/us/app/wdyw/id6761072597" target="_blank" rel="noopener" class="app-store-badge">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="#111"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#1F2124"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             <span class="badge-text">
               <span class="badge-sub">Download on the</span>
               <span class="badge-main">App Store</span>
