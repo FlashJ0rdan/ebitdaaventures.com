@@ -99,7 +99,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 72px;
+      height: 84px;
     }
     .logo {
       display: flex;
@@ -113,10 +113,10 @@
       transition: opacity 0.2s;
     }
     .logo:hover { opacity: 0.72; }
-    .logo img { height: 34px; width: auto; max-width: min(240px, 62vw); display: block; }
+    .logo img { height: 60px; width: auto; max-width: min(400px, 70vw); display: block; }
     .footer-brand { display: inline-flex; line-height: 0; flex: none; }
     .footer-brand img { height: 22px; width: auto; display: block; }
-    @media (max-width: 720px) { .logo img { height: 30px; } }
+    @media (max-width: 720px) { .logo img { height: 48px; } }
     .nav-links { display: flex; gap: 8px; align-items: center; }
     .nav-links a {
       color: var(--text-muted);
@@ -954,7 +954,7 @@
       .hero h1 { font-size: 2.4rem; }
       .hero p { font-size: 1rem; }
       .ticker-grid { grid-template-columns: repeat(2, 1fr); }
-      .logo img { height: 28px; }
+      .logo img { height: 42px; }
       nav .container { height: 64px; }
       html { scroll-padding-top: 64px; }
       .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
