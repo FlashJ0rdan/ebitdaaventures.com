@@ -6,16 +6,18 @@
   <title>Our Work — Ebitdaa Ventures</title>
   <meta name="description" content="Websites designed and built by Ebitdaa Ventures.">
   <link rel="canonical" href="https://ebitdaaventures.com/work/">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" href="/favicon.ico?v=20261111" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=20261111">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=20261111">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png?v=20261111">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=20261111">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Our Work — Ebitdaa Ventures">
-  <meta property="og:image" content="https://ebitdaaventures.com/og-image.png">
+  <meta property="og:image" content="https://ebitdaaventures.com/og-image.png?v=20261111">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/work/site.css">
+  <link rel="stylesheet" href="/work/site.css?v=20261111">
   <style>
     .work-hero { padding: 180px 0 72px; }
     .work-hero h1 { font-size: clamp(3rem, 9vw, 7.5rem); font-weight: 900; letter-spacing: -0.055em; line-height: .92; color: var(--text); }
@@ -28,7 +30,7 @@
     .work-item { display: block; }
     .work-shot { display: block; position: relative; overflow: hidden; border-radius: 16px; background: #1F2124; border: 1px solid var(--border); box-shadow: 0 40px 80px -40px rgba(31,33,36,.45); transition: box-shadow .35s, transform .35s; }
     .work-shot img { width: 100%; height: auto; aspect-ratio: 16/10; object-fit: cover; object-position: top; display: block; transition: transform .8s cubic-bezier(.2,.7,.2,1), filter .35s; }
-    .work-shot:hover, .work-shot:focus-visible { transform: translateY(-4px); box-shadow: 0 56px 100px -40px rgba(172,55,58,.38); outline: none; }
+    .work-shot:hover, .work-shot:focus-visible { transform: translateY(-4px); box-shadow: 0 56px 100px -40px rgba(47, 107, 79,.38); outline: none; }
     .work-shot:hover img, .work-shot:focus-visible img { transform: scale(1.02); filter: brightness(1.04); }
     .work-shot .open { position: absolute; right: 20px; bottom: 20px; background: var(--accent); color: #fff; font-size: .85rem; font-weight: 600; padding: 10px 16px; border-radius: 10px; opacity: 0; transform: translateY(6px); transition: all .25s; }
     .work-shot:hover .open, .work-shot:focus-visible .open { opacity: 1; transform: none; }
@@ -57,7 +59,7 @@
 
   <nav id="navbar">
     <div class="container">
-      <a href="/" class="logo" aria-label="Ebitdaa Ventures"><img src="/logo.png" alt="Ebitdaa Ventures"></a>
+      <a href="/" class="logo" aria-label="Ebitdaa Ventures"><img src="/brand/ebitdaa_lockup.svg?v=20261111" alt="Ebitdaa Ventures"></a>
       <div class="nav-links">
         <a href="/#portfolio">Portfolio</a>
         <a href="/work/" aria-current="page">Work</a>
@@ -102,7 +104,10 @@
   <footer>
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-left">&copy; 2026 Ebitdaa Ventures LLC</div>
+        <div class="footer-left">
+          <a href="/" class="footer-brand" aria-label="Ebitdaa Ventures"><img src="/brand/ebitdaa_lockup.svg?v=20261111" alt=""></a>
+          <span>&copy; 2026 Ebitdaa Ventures LLC</span>
+        </div>
         <div class="footer-right">
           <a href="/#contact">Contact</a>
           <a href="https://apps.apple.com/us/app/wdyw/id6761072597" target="_blank" rel="noopener">App Store</a>
@@ -166,7 +171,7 @@
     const t = document.getElementById('mobileToggle'), links = document.querySelector('.nav-links');
     t.addEventListener('click', () => {
       const hidden = getComputedStyle(links).display === 'none';
-      Object.assign(links.style, hidden ? {display:'flex',position:'absolute',top:'76px',left:'0',right:'0',flexDirection:'column',padding:'16px 24px',background:'rgba(255,255,255,0.97)',borderBottom:'1px solid var(--border-subtle)',gap:'4px'} : {display:'none'});
+      Object.assign(links.style, hidden ? {display:'flex',position:'absolute',top:nav.offsetHeight+'px',left:'0',right:'0',flexDirection:'column',padding:'16px 24px',background:'rgba(255,255,255,0.97)',borderBottom:'1px solid var(--border-subtle)',gap:'4px'} : {display:'none'});
     });
   </script>
 </body>
