@@ -201,18 +201,15 @@ a { color: inherit; }
 .mosaic a:first-child { grid-row: 1 / 3; }
 .mosaic img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 
-/* ── About / founder ── */
+/* ── About: company block ── */
 .about-copy p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 18px; max-width: 560px; }
-.founder { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
-.founder-photo {
-  aspect-ratio: 4 / 5; border-radius: var(--radius); background: var(--white);
-  border: 1.5px dashed var(--charcoal); display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 16px; font-size: 0.85rem; color: var(--charcoal);
-}
-.founder-name { font-family: var(--serif); font-size: 2.4rem; line-height: 1.05; }
-.founder-role { color: var(--green); font-weight: 600; margin-bottom: 14px; }
-.founder p { color: var(--text-muted); margin-bottom: 14px; }
-.founder-links { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+.company-card { background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: var(--radius); padding: 32px; }
+.company-line { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.1; margin: 16px 0 24px; }
+.company-facts { display: grid; gap: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+.company-facts div { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: baseline; }
+.company-facts dt { font-size: 0.88rem; color: var(--text-muted); }
+.company-facts dd { word-break: break-word; }
+.coming-soon { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--charcoal); }
 
 /* ── Contact ── */
 .contact-direct a { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--green); text-decoration: none; word-break: break-word; }
@@ -288,7 +285,6 @@ a { color: inherit; }
   .hero-cta { padding-bottom: 64px; }
   .feature, .split, .split--rev, .product-row { grid-template-columns: 1fr; gap: 32px; }
   .split--rev > :first-child { order: 2; }
-  .founder { grid-template-columns: 160px 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-about { grid-column: 1 / -1; }
   .section { padding: 80px 0; }
@@ -314,8 +310,6 @@ a { color: inherit; }
   .stats-grid li { padding: 18px 0; border-bottom: 1px solid var(--line); }
   .form-row { grid-template-columns: 1fr; }
   .contact-form { padding: 22px; }
-  .founder { grid-template-columns: 1fr; }
-  .founder-photo { max-width: 200px; }
   .mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; }
   .mosaic a:first-child { grid-column: 1 / -1; grid-row: auto; }
   .work-intro { grid-template-columns: 1fr; }
