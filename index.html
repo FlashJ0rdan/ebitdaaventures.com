@@ -29,7 +29,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css?v=20261114b">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261114c">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Ebitdaa Ventures LLC","alternateName":"Ebitdaa Ventures","url":"https://ebitdaaventures.com/","logo":"https://ebitdaaventures.com/brand/ebitdaa_lockup.png","description":"Ebitdaa Ventures is a small software studio. We build and run vertical SaaS for self-storage and local services, a consumer app for picking a restaurant with friends, and websites for businesses.","email":"jordan@ebitdaaventures.com","contactPoint":[{"@type":"ContactPoint","contactType":"customer support","email":"jordan@ebitdaaventures.com","availableLanguage":"English"}],"sameAs":["https://x.com/ebitdaaventures"]}</script>
 </head>
 <body>
@@ -207,7 +207,7 @@
       </div>
     </section>
 
-    <!-- Contact: honest mailto with topic selector -->
+    <!-- Contact: form posts to the ebitdaa-contact backend (Resend) -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container split">
         <div class="contact-copy">
@@ -232,8 +232,10 @@
           </div>
           <div class="form-field"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" autocomplete="email" required></div>
           <div class="form-field"><label for="cf-message">Message</label><textarea id="cf-message" name="message" required></textarea></div>
-          <button type="submit" class="btn btn--primary form-submit">Open in my email app →</button>
-          <p class="form-note">This form doesn't send anything by itself. It opens a pre-filled email in your mail app, and nothing is sent until you press send there. No mail app? Email <a href="mailto:jordan@ebitdaaventures.com">jordan@ebitdaaventures.com</a>. See our <a href="/privacy/">privacy notice</a>.</p>
+          <div class="form-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden"><label for="cf-website">Website</label><input type="text" id="cf-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button type="submit" class="btn btn--primary form-submit" id="cf-submit">Send message →</button>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite" hidden></p>
+          <p class="form-note">We'll reply by email. See our <a href="/privacy/">privacy notice</a>.</p>
         </form>
       </div>
     </section>
@@ -241,8 +243,8 @@
 
   <div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
     <div class="modal-card">
-      <h3 id="modal-title">Check your email app</h3>
-      <p>We tried to open a pre-filled email to jordan@ebitdaaventures.com. <strong>Nothing has been sent yet</strong> — press send in your mail app. If nothing opened, email <a href="mailto:jordan@ebitdaaventures.com">jordan@ebitdaaventures.com</a> directly.</p>
+      <h3 id="modal-title">Message sent</h3>
+      <p>Thanks — your message is on its way. We'll be in touch shortly.</p>
       <button class="btn btn--primary" id="modalClose" type="button">Got it</button>
     </div>
   </div>
@@ -307,20 +309,36 @@
       document.querySelectorAll('[data-topic]').forEach(function (a) {
         a.addEventListener('click', function () { document.getElementById('cf-topic').value = a.dataset.topic; });
       });
-      // Contact: no backend. Opens the visitor's mail app pre-filled and says so honestly.
+      // Contact: POST to the ebitdaa-contact backend, which sends through Resend.
+      var CONTACT_ENDPOINT = 'https://ebitdaa-contact.vercel.app/api/contact';
       var CONTACT_EMAIL = 'jordan@ebitdaaventures.com';
-      var TOPICS = { product: 'Product question', website: 'Website / marketing project', partnership: 'Partnership / investment', other: 'General' };
       var form = document.getElementById('contactForm'), modal = document.getElementById('contactModal');
+      var btn = document.getElementById('cf-submit'), status = document.getElementById('cf-status');
+      var btnLabel = btn.textContent;
+      function showError() {
+        status.hidden = false;
+        status.className = 'form-status form-status--error';
+        status.innerHTML = 'Sorry — your message didn\'t send. Please email us at <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>.';
+      }
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!form.checkValidity()) { form.reportValidity(); return; }
         var v = function (id) { return document.getElementById(id).value.trim(); };
-        var topic = TOPICS[v('cf-topic')] || 'General';
-        var subject = '[' + topic + '] Website inquiry from ' + v('cf-name');
-        var body = v('cf-message') + '\n\n— ' + v('cf-name') + '\nEmail: ' + v('cf-email') + (v('cf-phone') ? '\nPhone: ' + v('cf-phone') : '') + '\nTopic: ' + topic;
-        window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-        modal.hidden = false;
-        document.getElementById('modalClose').focus();
+        status.hidden = true;
+        btn.disabled = true; btn.textContent = 'Sending…';
+        fetch(CONTACT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topic: v('cf-topic'), name: v('cf-name'), email: v('cf-email'), phone: v('cf-phone'), message: v('cf-message'), website: document.getElementById('cf-website').value })
+        }).then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+          .then(function (d) {
+            if (!d || !d.ok) { showError(); return; }
+            form.reset();
+            modal.hidden = false;
+            document.getElementById('modalClose').focus();
+          })
+          .catch(showError)
+          .then(function () { btn.disabled = false; btn.textContent = btnLabel; });
       });
       function closeModal() { modal.hidden = true; }
       document.getElementById('modalClose').addEventListener('click', closeModal);
